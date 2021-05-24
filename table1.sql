@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 24, 2021 at 02:39 PM
+-- Generation Time: May 24, 2021 at 02:50 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -37,7 +37,8 @@ CREATE TABLE `table1` (
 --
 
 INSERT INTO `table1` (`Unique id`, `Name`) VALUES
-('1224', 'sahah');
+('1224', 'sahah'),
+('9999', 'shru');
 
 --
 -- Indexes for dumped tables
