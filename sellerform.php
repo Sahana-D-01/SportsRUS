@@ -28,6 +28,7 @@
             <a href="index.php" class="mr-5 hover:text-gray-900">Our Vision</a>
             <a href="team.php" class="mr-5 hover:text-gray-900">Our Team</a>
             <a href="marketplace.php" class="mr-5 hover:text-gray-900">Marketplace</a>
+            <a href="contact.php" class="mr-5 hover:text-gray-900">Contact Us</a>
         </nav>
         <a href="index.php" style="font-family: 'Zen Dots', cursive;" class="order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
             <span style="font-size: 40px;" class="ml-3 text-xl md:text-lg">SportsRUs</span>
