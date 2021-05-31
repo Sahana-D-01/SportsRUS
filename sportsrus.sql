@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 31, 2021 at 10:10 AM
+-- Generation Time: May 31, 2021 at 03:19 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -20,17 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `sportsrus`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `buyer`
---
-
-CREATE TABLE `buyer` (
-  `user_id` int(6) UNSIGNED NOT NULL,
-  `product_id` int(6) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -76,6 +65,17 @@ CREATE TABLE `product` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `request`
+--
+
+CREATE TABLE `request` (
+  `user_id` int(6) UNSIGNED NOT NULL,
+  `product_id` int(6) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -94,13 +94,6 @@ CREATE TABLE `user` (
 --
 
 --
--- Indexes for table `buyer`
---
-ALTER TABLE `buyer`
-  ADD KEY `buyer_fk` (`user_id`),
-  ADD KEY `product_id` (`product_id`);
-
---
 -- Indexes for table `category`
 --
 ALTER TABLE `category`
@@ -113,6 +106,13 @@ ALTER TABLE `product`
   ADD PRIMARY KEY (`product_id`),
   ADD KEY `product_fk` (`user_id`),
   ADD KEY `category_id` (`category_id`);
+
+--
+-- Indexes for table `request`
+--
+ALTER TABLE `request`
+  ADD KEY `purchase_fk` (`user_id`),
+  ADD KEY `product_id` (`product_id`);
 
 --
 -- Indexes for table `user`
@@ -136,7 +136,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `product_id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `product_id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=300001;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -149,18 +149,18 @@ ALTER TABLE `user`
 --
 
 --
--- Constraints for table `buyer`
---
-ALTER TABLE `buyer`
-  ADD CONSTRAINT `buyer_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
-  ADD CONSTRAINT `buyer_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`);
-
---
 -- Constraints for table `product`
 --
 ALTER TABLE `product`
   ADD CONSTRAINT `product_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
   ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`category_id`);
+
+--
+-- Constraints for table `request`
+--
+ALTER TABLE `request`
+  ADD CONSTRAINT `request_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
+  ADD CONSTRAINT `request_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
