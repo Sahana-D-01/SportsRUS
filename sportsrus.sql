@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 29, 2021 at 08:12 PM
+-- Generation Time: May 31, 2021 at 10:10 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -86,20 +86,8 @@ CREATE TABLE `user` (
   `phno` varchar(10) NOT NULL,
   `email_id` varchar(50) NOT NULL,
   `password` varchar(300) NOT NULL,
-  `city` varchar(20) NOT NULL,
-  `rating` decimal(1,1) UNSIGNED DEFAULT NULL
+  `city` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`user_id`, `f_name`, `l_name`, `phno`, `email_id`, `password`, `city`, `rating`) VALUES
-(100003, 'Vriksha', 'Srihari ', '9884812161', 'vriksha.ariel@gmail.com', '$2y$10$.uy7VrbY5NmN.', 'Chennai', NULL),
-(100004, 'a', 'Srihari ', '9123456780', 'a@gmail.com', '$2y$10$kGQ1bHVArHu5D', 'qwe', NULL),
-(100005, 'b', 'Srihari ', '9811223344', 'b@gmail.com', '$2y$10$adirfgXSd6QsW', 'dfg', NULL),
-(100006, 'c', 'Srihari ', '9022334455', 'c@gmail.com', '$2y$10$ZJutGMlb2dEp3', 'c', NULL),
-(100007, 'd', 'Srihari ', '9123456708', 'd@gmail.com', '$2y$10$tRgUrtIHxSJh88MA/A4eoeE0m2oREzV9G89K1W4Af6iaLI.ZiRaWG', 'd', NULL);
 
 --
 -- Indexes for dumped tables
@@ -148,13 +136,13 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `product_id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=300001;
+  MODIFY `product_id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100008;
+  MODIFY `user_id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
