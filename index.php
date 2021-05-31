@@ -21,7 +21,7 @@
 	<!--HEADER-->
 	<header class="text-gray-600 body-font">
 		<div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-			<nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto"> <a class="mr-5 hover:text-gray-900">Our Vision</a> <a href="team.html" class="mr-5 hover:text-gray-900">Our Team</a> <a href="categories.html" class="mr-5 hover:text-gray-900">Marketplace</a> <a href="contact.html" class="mr-5 hover:text-gray-900">Contact Us</a> </nav>
+			<nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto"> <a class="mr-5 hover:text-gray-900">Our Vision</a> <a href="team.php" class="mr-5 hover:text-gray-900">Our Team</a> <a href="marketplace.php" class="mr-5 hover:text-gray-900">Marketplace</a> <a href="contact.php" class="mr-5 hover:text-gray-900">Contact Us</a> </nav>
 			<a style ="font-family: 'Zen Dots', cursive;" class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0"> <span style="font-size: 40px;" class="ml-3 text-xl">SportsRUs</span> </a>
 			<div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
 			<?php if(isset($_SESSION['first_name'])) { ?>
