@@ -7,7 +7,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>repl.it</title>
+	<title>SportsRUs</title>
 	<link href="style.css" rel="stylesheet" type="text/css" />
 	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -25,18 +25,18 @@
 			<a style ="font-family: 'Zen Dots', cursive;" class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0"> <span style="font-size: 40px;" class="ml-3 text-xl">SportsRUs</span> </a>
 			<div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
 			<?php if(isset($_SESSION['first_name'])) { ?>
-			<button class="inline-flex items-center bg-gray-100 border-0 mr-1 py-1 px-3 focus:outline-none hover:bg-gray-200 text-base mt-4 md:mt-0 rounded"><a href="sellerform.html">Sell Some Stuff!</a>
+			<button class="inline-flex items-center bg-gray-100 border-0 mr-1 py-1 px-3 focus:outline-none hover:bg-gray-200 text-base mt-4 md:mt-0 rounded"><a href="sellerform.php">Sell Some Stuff!</a>
             <path d="M5 12h14M12 5l7 7-7 7"></path>
             </button>
 			<button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 text-base mt-4 md:mt-0 rounded"><a href="profile.php"><?php echo $_SESSION['first_name'] ?>'s Profile</a>
 			<?php } else { ?>
             <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 text-base mt-4 md:mt-0 rounded"><a href="signup.html">Login | Sign Up</a>
             <?php } ?>
-			<? endif; ?>
 			<path d="M5 12h14M12 5l7 7-7 7"></path>
           </button>
-			</div>
+        </div>
 	</header>
+
 	<!--ABOUT US-->
 	<section class="text-gray-700 ">
 		<div class="container flex flex-col items-center px-5 py-8 mx-auto">

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <title>SportsRUs</title>
     <link href="style.css" rel="stylesheet" type="text/css"/>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -66,7 +66,7 @@ $user = mysqli_fetch_assoc($result);
 if($user)
 {
 	if(($user['email_id'] === $email) or ($user['phno'] === $phone)){
-		array_push($errors, "This email has arleady been registered with us.");
+		array_push($errors, "This email has already been registered with us.");
 		echo '<div class="min-h-screen">';
         echo '<div class="fixed h-screen w-screen flex items-center justify-center">';
             echo '<div class="absolute inset-0 bg-gray-200 z-10"> </div>';
