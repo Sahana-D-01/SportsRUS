@@ -146,6 +146,7 @@
 			  <script>
 				function func()
 				{
+					alert("you have requested the product");
 					//document.getElementById("req").innerHTML="Requested";
 				  <?php
 					$sqli="INSERT INTO request(user_id,product_id) VALUES ($uid,$pid)";
