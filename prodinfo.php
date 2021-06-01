@@ -139,12 +139,12 @@
             <div class="flex">
               <span class="title-font font-medium text-2xl text-gray-900">Price: <?php echo $row['p_price'];?></span>
 			  
-              <button class="flex ml-auto font-semibold text-white bg-black hover:text-blackborder-0 py-2 px-6 items-center justify-center focus:outline-none rounded" onclick="func()"><a id="reqe" onclick="func()">Request</a></button>
+              <button class="flex ml-auto font-semibold text-white bg-black hover:text-blackborder-0 py-2 px-6 items-center justify-center focus:outline-none rounded" onclick="func()"><a id="req" onclick="func()">Request</a></button>
 			  
 			  <script>
 				function func()
 				{
-					document.getElementById("reqe").innerHTML="Requested";
+					document.getElementById("req").innerHTML="Requested";
 				  <?php
 					$sqli="INSERT INTO request(user_id,product_id) VALUES ($uid,$pid)";
 					mysqli_query($conn,$sqli);
