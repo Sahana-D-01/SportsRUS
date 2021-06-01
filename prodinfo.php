@@ -8,6 +8,7 @@
 	//$query = "SELECT * FROM user WHERE user_id='{$_SESSION['sid']}'"
 	$r = mysqli_query($conn, $query);
 	$ro = mysqli_fetch_assoc($r);
+	$uid=$ro['user_id'];
 	////$u=100008;
 	//$sql = "SELECT * FROM user where user_id=$u";
 	//$_SESSION["uid"]="$sql";
@@ -139,12 +140,13 @@
             <div class="flex">
               <span class="title-font font-medium text-2xl text-gray-900">Price: <?php echo $row['p_price'];?></span>
 			  
-              <button class="flex ml-auto font-semibold text-white bg-black hover:text-blackborder-0 py-2 px-6 items-center justify-center focus:outline-none rounded" onclick="func()"><a id="req" onclick="func()">Request</a></button>
-			  
+              <!--<button class="flex ml-auto font-semibold text-white bg-black hover:text-blackborder-0 py-2 px-6 items-center justify-center focus:outline-none rounded"><a id="req" onclick="func()">Request</a></button>-->
+			  <button class="flex ml-auto font-semibold text-white bg-black hover:text-blackborder-0 py-2 px-6 items-center justify-center focus:outline-none rounded">
+              <a id="req" onclick="func()">Request</a></button>
 			  <script>
 				function func()
 				{
-					document.getElementById("req").innerHTML="Requested";
+					//document.getElementById("req").innerHTML="Requested";
 				  <?php
 					$sqli="INSERT INTO request(user_id,product_id) VALUES ($uid,$pid)";
 					mysqli_query($conn,$sqli);
