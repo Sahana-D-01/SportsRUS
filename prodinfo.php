@@ -8,9 +8,18 @@
 	//$query = "SELECT * FROM user WHERE user_id='{$_SESSION['sid']}'"
 	$r = mysqli_query($conn, $query);
 	$ro = mysqli_fetch_assoc($r);
-	$q= "SELECT * FROM request where product_id= '$pid' and user_id = '{$ro['user_id']}'";
-	$ru=mysqli_query($conn,$q);
-	$exist = mysqli_fetch_assoc($ru);
+	////$u=100008;
+	//$sql = "SELECT * FROM user where user_id=$u";
+	//$_SESSION["uid"]="$sql";
+	//$q="SELECT * FROM product where product_id=300002";
+	//$r=mysqli_query($conn,$q);
+	//$product_id = "SELECT * FROM product WHERE product_id='{$_SESSION['pid']}'";
+	//$product_result = mysqli_query($conn, $product_id);
+	//$row = mysqli_fetch_assoc($product_result);
+	//$_SESSION['user_id']=$ro['user_id'];
+	//echo $uid;
+	//echo $ro['user_id'];
+	
 ?>
  
 <!DOCTYPE html>
@@ -33,11 +42,18 @@
     </script>
 
     <!--HEADER-->
-	<header class="text-gray-600 body-font">
-		<div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-			<nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto"> <a href="index.php" class="mr-5 hover:text-gray-900">Our Vision</a> <a href="team.php" class="mr-5 hover:text-gray-900">Our Team</a> <a href="marketplace.php" class="mr-5 hover:text-gray-900">Marketplace</a> <a href="contact.php" class="mr-5 hover:text-gray-900">Contact Us</a> </nav>
-			<a href="index.php" style ="font-family: 'Zen Dots', cursive;" class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0"> <span style="font-size: 40px;" class="ml-3 text-xl">SportsRUs</span> </a>
-			<div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
+                <a href="index.php" class="mr-5 hover:text-gray-900">Our Vision</a>
+                <a href="team.php" class="mr-5 hover:text-gray-900">Our Team</a>
+                <a href="marketplace.php" class="mr-5 hover:text-gray-900">Marketplace</a>
+				<a href="contact.php" class="mr-5 hover:text-gray-900">Contact Us</a>
+            </nav>
+            <a href="index.html" style="font-family: 'Zen Dots', cursive;" class="order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
+                <span style="font-size: 40px;" class="ml-3 text-xl md:text-lg">SportsRUs</span>
+            </a>
+            <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
 			<?php if(isset($_SESSION['first_name'])) { ?>
 			<button class="inline-flex items-center bg-gray-100 border-0 mr-1 py-1 px-3 focus:outline-none hover:bg-gray-200 text-base mt-4 md:mt-0 rounded"><a href="sellerform.php">Sell Some Stuff!</a>
             <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -46,10 +62,11 @@
 			<?php } else { ?>
             <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 text-base mt-4 md:mt-0 rounded"><a href="signup.html">Login | Sign Up</a>
             <?php } ?>
-			<path d="M5 12h14M12 5l7 7-7 7"></path>
-          </button>
-			</div>
-	</header>
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </button>
+            </div>
+        </div>
+    </header>
     
 	<?php
 	$product_id = "SELECT * FROM product WHERE product_id='{$pid}'";
@@ -59,7 +76,6 @@
 	$seller_id="SELECT * FROM user WHERE user_id='{$_SESSION['sid']}'";
 	$seller_result=mysqli_query($conn, $seller_id);
 	$sow=mysqli_fetch_assoc($seller_result);
-	$uid = $_SESSION['user_id'];
 	//$query = "SELECT * FROM user WHERE user_id='{$_SESSION['sid']}'"
 	//$r = mysqli_query($conn, $query);
 	//$ro = mysqli_fetch_assoc($r);
@@ -121,18 +137,14 @@
             </div>-->
             
             <div class="flex">
-              <span class="title-font font-medium text-2xl text-gray-900">Price: <?php echo $row['p_price']; ?></span>
-			  <?php if($exist['user_id']) { ?>
-              <button class="flex ml-auto font-semibold text-white bg-black hover:text-blackborder-0 py-2 px-6 items-center justify-center focus:outline-none rounded" href="request.php">
-              <a id="req" href="#" onclick="func()">Requested</a></button>
-			  <?php } else { ?>
-			  <button class="flex ml-auto font-semibold text-white bg-black hover:text-blackborder-0 py-2 px-6 items-center justify-center focus:outline-none rounded" href="request.php">
-              <a id="req" href="#" onclick="func()">Request</a></button>
-			  <?php } ?>
+              <span class="title-font font-medium text-2xl text-gray-900">Price: <?php echo $row['p_price'];?></span>
+			  
+              <button class="flex ml-auto font-semibold text-white bg-black hover:text-blackborder-0 py-2 px-6 items-center justify-center focus:outline-none rounded" onclick="func()"><a id="reqe" onclick="func()">Request</a></button>
+			  
 			  <script>
 				function func()
 				{
-					//document.getElementById("req").innerHTML="Requested";
+					document.getElementById("reqe").innerHTML="Requested";
 				  <?php
 					$sqli="INSERT INTO request(user_id,product_id) VALUES ($uid,$pid)";
 					mysqli_query($conn,$sqli);
