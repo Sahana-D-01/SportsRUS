@@ -98,6 +98,7 @@ if(count($errors) === 0)
 	{
 		$_SESSION['first_name'] = $first_name;
 		$_SESSION['email_id'] = $email;
+        $_SESSION['user_id'] = $row["user_id"];
 		$_SESSION['db'] = $conn;
 		$_SESSION['success'] = "Successfully logged in after sign up!";	
 		header('location: index.php');

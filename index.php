@@ -18,24 +18,26 @@
 <body>
 	<script src="script.js">
 	</script>
-	<!--HEADER-->
-	<header class="text-gray-600 body-font">
-		<div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-			<nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto"> <a class="mr-5 hover:text-gray-900">Our Vision</a> <a href="team.php" class="mr-5 hover:text-gray-900">Our Team</a> <a href="marketplace.php" class="mr-5 hover:text-gray-900">Marketplace</a></nav>
-			<a style ="font-family: 'Zen Dots', cursive;" class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0"> <span style="font-size: 40px;" class="ml-3 text-xl">SportsRUs</span> </a>
-			<div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
-			<?php if(isset($_SESSION['first_name'])) { ?>
-			<button class="inline-flex items-center bg-gray-100 border-0 mr-1 py-1 px-3 focus:outline-none hover:bg-gray-200 text-base mt-4 md:mt-0 rounded"><a href="sellerform.php">Sell Some Stuff!</a>
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </button>
-			<button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 text-base mt-4 md:mt-0 rounded"><a href="profile.php"><?php echo $_SESSION['first_name'] ?>'s Profile</a>
-			<?php } else { ?>
-            <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 text-base mt-4 md:mt-0 rounded"><a href="signup.html">Login | Sign Up</a>
-            <?php } ?>
-			<path d="M5 12h14M12 5l7 7-7 7"></path>
-          </button>
-        </div>
-	</header>
+    
+    <!--HEADER-->
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto"> <a href="index.php" class="mr-5 hover:text-gray-900">Our Vision</a> <a href="team.php" class="mr-5 hover:text-gray-900">Our Team</a> <a href="marketplace.php" class="mr-5 hover:text-gray-900">Marketplace</a> <a href="contact.php" class="mr-5 hover:text-gray-900">Contact Us</a> </nav>
+            <a href="index.php" style ="font-family: 'Zen Dots', cursive;" class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0"> <span style="font-size: 40px;" class="ml-3 text-xl">SportsRUs</span> </a>
+            <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+                <?php if(isset($_SESSION['first_name'])) { ?>
+                <button class="inline-flex items-center bg-gray-100 border-0 mr-1 py-1 px-3 focus:outline-none hover:bg-gray-200 text-base mt-4 md:mt-0 rounded"><a href="sellerform.php">Sell Some Stuff!</a>
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </button>
+                <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 text-base mt-4 md:mt-0 rounded"><a href="profile.php"><?php echo $_SESSION['first_name'] ?>'s Profile</a>
+                    <?php } else { ?>
+                    <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 text-base mt-4 md:mt-0 rounded"><a href="signup.html">Login | Sign Up</a>
+                        <?php } ?>
+                        <? endif; ?>
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </button>
+            </div>
+    </header>
 
 	<!--ABOUT US-->
 	<section class="text-gray-700 ">
