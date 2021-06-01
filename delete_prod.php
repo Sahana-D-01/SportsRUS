@@ -33,12 +33,12 @@ $pid = $_GET['varname'];
                     echo '</div>';
                 echo '</div>';
                 echo '<div class="p-3 bg-gray-50 text-center md:space-x-4 md:block flex flex-col-reverse">';
-                    echo '<form method="get" action="delete.php">';  
+                    echo '<form method="get">';
 					?>
-						<input type="hidden" name="varname" value="<?php echo $row['product_id'] ?>">
+						<input type="hidden" name="varname" value="<?php echo $pid?>">
 						<?php
                         echo '<button formaction="my_items_on_sale.php" class="mr-2 px-4 md:py-1.5 py-2 bg-white border-2 rounded-lg focus:ring-offset-2 focus:outline-none focus:ring-2 focus:ring-blue-800 hover:bg-gray-50">Go Back</button>';
-						echo '<button type="submit" class="mr-2 px-4 md:py-1.5 py-2 bg-white border-2 rounded-lg focus:ring-offset-2 focus:outline-none focus:ring-2 focus:ring-blue-800 hover:bg-gray-50">Delete Product</button>';
+						echo '<button formaction="delete.php" type="submit" class="mr-2 px-4 md:py-1.5 py-2 bg-white border-2 rounded-lg focus:ring-offset-2 focus:outline-none focus:ring-2 focus:ring-blue-800 hover:bg-gray-50">Delete Product</button>';
                     echo '</form>';
                 echo '</div>';
             echo '</div>';
