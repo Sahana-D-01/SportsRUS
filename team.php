@@ -51,7 +51,7 @@
         </div>
         <div class="flex flex-wrap -m-4">
             <div class="xl:w-1/4 md:w-1/2 p-4">
-                <div class="bg-gray-100 p-6 rounded-lg"> <img class="h-40 rounded w-full object-cover object-center mb-6" src="pictures/bhavya.jpg" alt="content">
+                <div class="bg-gray-100 p-6 rounded-lg"> <img class="h-40 rounded w-full object-cover object-center mb-6" src="pictures/bhavya.jpeg" alt="content">
                     <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">FRONT-END AND BACK-END</h3>
                     <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Bhavya Ramkumar</h2>
                     <p class="mb-3 leading-relaxed text-base">Bhavya is a 2nd year student of Computer Science at the College of Engineering, Guindy.</p>
@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="xl:w-1/4 md:w-1/2 p-4">
-                <div class="bg-gray-100 p-6 rounded-lg"> <img class="h-40 rounded w-full object-cover object-center mb-6" src="pictures/sahana.jpg" alt="content">
+                <div class="bg-gray-100 p-6 rounded-lg"> <img class="h-40 rounded w-full object-cover object-center mb-6" src="pictures/sahana.jpeg" alt="content">
                     <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">FRONT-END AND BACK-END</h3>
                     <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Sahana Dinesh</h2>
                     <p class="mb-3 leading-relaxed text-base">Sahana is a 2nd year student of Computer Science at the College of Engineering, Guindy.</p>
@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="xl:w-1/4 md:w-1/2 p-4">
-                <div class="bg-gray-100 p-6 rounded-lg"> <img class="h-40 rounded w-full object-cover object-center mb-6" src="pictures/shruti.png" alt="content">
+                <div class="bg-gray-100 p-6 rounded-lg"> <img class="h-40 rounded w-full object-cover object-center mb-6" src="pictures/shruti.jpeg" alt="content">
                     <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">FRONT-END AND BACK-END</h3>
                     <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Shruti Jayaraman</h2>
                     <p class="mb-3 leading-relaxed text-base">Shruti is a 2nd year student of Computer Science at the College of Engineering, Guindy.</p>
@@ -75,7 +75,7 @@
                 </div>
             </div>
             <div class="xl:w-1/4 md:w-1/2 p-4">
-                <div class="bg-gray-100 p-6 rounded-lg"> <img class="h-40 rounded w-full object-cover object-center mb-6" src="pictures/vriksha.jpg" alt="content">
+                <div class="bg-gray-100 p-6 rounded-lg"> <img class="h-40 rounded w-full object-cover object-center mb-6" src="pictures/vriksha.jpeg" alt="content">
                     <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">FRONT-END AND BACK-END</h3>
                     <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Vriksha Srihari</h2>
                     <p class="mb-3 leading-relaxed text-base">Vriksha is a 2nd year student of Computer Science at the College of Engineering, Guindy.</p>
